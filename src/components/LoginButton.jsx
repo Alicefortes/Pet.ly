@@ -27,9 +27,6 @@ export default function LoginButton() {
   async function signIn() {
     try {
       result = await signInWithPopup(auth, provider);
-      // const result = await getRedirectResult(auth);
-      const user = result.user;
-      await registerUser(user);
     } catch (error) {
       console.log("Promise Rejected:", error.message);
     }
